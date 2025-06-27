@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // Agora, fazemos a requisição para o nosso próprio servidor back-end
       const response = await fetch(
-        `http://localhost:3000/air-pollution?city=${city}`
+        `http://56.228.36.53:3000/air-pollution?city=${city}`
       );
 
       // Se a resposta do nosso servidor não for 'ok' (ex: erro 404, 500),
