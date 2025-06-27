@@ -1,23 +1,28 @@
-name: CI
+name: CI - Testes Automatizados
 
 on:
   push:
-    branches: [develop]
+    branches: [main]
 
 jobs:
-  build:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Instalar dependências
-        run: cd backend && npm install
+      - name: Install dependencies
+        run: |
+          cd backend
+          npm install
 
-      - name: Executar testes unitários
-        run: cd backend && npm test
+      - name: Run tests
+        run: |
+          cd backend
+          npm test
