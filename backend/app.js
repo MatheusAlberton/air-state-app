@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 
 const PORT = 3000;
-const API_KEY = "SUA_API_KEY_AQUI";
+const API_KEY = "64c6581665867c3339ae0dff0822ad4c";
 
 app.get("/air-pollution", async (req, res) => {
   const city = req.query.city;
